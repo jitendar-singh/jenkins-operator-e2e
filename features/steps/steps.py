@@ -16,3 +16,4 @@ def step_impl(context):
     os.system('oc get all')
     print('Resources created succesfully\n')
     print('Jenkins Operator is running')
+    print('Lets commit')
