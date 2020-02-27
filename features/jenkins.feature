@@ -1,6 +1,6 @@
 Feature: jenkins.feature
 
-  # @author cryan@redhat.com
+  
   Scenario Outline: Trigger build of application from jenkins job with ephemeral volume
     Given I have a project
     And I have a jenkins v<ver> application
@@ -74,7 +74,7 @@ Feature: jenkins.feature
       | ver |
       | 1   | 
       | 2   | 
-  # @author cryan@redhat.com
+  
   @smoke
   Scenario Outline: Trigger build of application from jenkins job with persistent volume
     Given I have a project
@@ -149,7 +149,7 @@ Feature: jenkins.feature
       | ver |
       | 1   | 
       | 2   | 
-  # @author xiuwang@redhat.com
+  
   Scenario Outline: Make jenkins slave configurable when do jenkinspipeline strategy with maven slave
     Given I have a project
     And I have a jenkins v<version> application
@@ -167,7 +167,7 @@ Feature: jenkins.feature
       | version |
       | 1       | 
       | 2       | 
-  # @author cryan@redhat.com
+  
   Scenario Outline: Delete resource using jenkins pipeline DSL
     Given I have a project
     And I have a jenkins v<ver> application
@@ -215,8 +215,7 @@ Feature: jenkins.feature
       | ver |
       | 1   | 
       | 2   | 
-  # @author xiuwang@redhat.com
-  # @case_id OCP-12773
+  
   Scenario: new-app/new-build support for pipeline buildconfigs
     Given I have a project
     When I run the :new_app client command with:
@@ -336,8 +335,7 @@ Feature: jenkins.feature
       | object_name_or_id | nodejs-ex-pipeline7 |
     Then the step should succeed
 
-  # @author xiuwang@redhat.com
-  # @case_id OCP-13259
+  
   Scenario Outline: Add/update env vars to pipeline buildconfigs using jenkinsfile field
     Given I have a project
     And I have a jenkins v<version> application
@@ -405,8 +403,7 @@ Feature: jenkins.feature
       | 1       |
       | 2       |
 
-  # @author xiuwang@redhat.com
-  # @case_id OCP-15384
+  
   Scenario: Jenkins pipeline build with OpenShift Client Plugin Example
     And I have a project
     When I run the :create client command with:
@@ -431,8 +428,7 @@ Feature: jenkins.feature
       | /usr/bin/dumb-init -- /usr/libexec/s2i/run                             |
       | java -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 |
 
-  # @author xiuwang@redhat.com
-  # @case_id OCP-17357
+  
   Scenario: Explicitly set jdk version via env var in jenkins-2-rhel7
     Given I have a project
     When I run the :new_app client command with:
@@ -504,8 +500,7 @@ Feature: jenkins.feature
     And the output should contain:
       | x86_64 |
 
-  # @author xiuwang@redhat.com
-  # @case_id OCP-25401
+  
   Scenario: Create jenkins application directly
     Given I have a project
     When I run the :new_app client command with:
