@@ -66,6 +66,7 @@ def step_impl(context):
 def step_impl(context):
     raise NotImplementedError(u'STEP: Given I get project is')
 
+#  describe client
 
 @when(u'I run the :describe client command with')
 def step_impl(context):
