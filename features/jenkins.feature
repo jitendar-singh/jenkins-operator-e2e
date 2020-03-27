@@ -14,7 +14,13 @@ Feature: jenkins.feature
       |  id | -u |
     Then the step should succeed
     #Check that the user is not root, or 0 id
-    #The regex below should match any number greater than 0
+    #The regex below should match any number greater  created')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given the "frontend-2" build was created')
+
+
+@given(u'the "frontend-2" build completes')
+def step_impl(context):than 0
     And the output should match "^[1-9][0-9]*$"
     Given I have a jenkins browser
     And I log in to jenkins
